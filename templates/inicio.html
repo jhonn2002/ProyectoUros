@@ -1,0 +1,129 @@
+{% extends 'index.html' %}
+{% block section %}
+    <div class="containerInicioUno">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/fotos/fotos_inicio/1.jpeg" class="d-block" alt="...">
+                    <div class="caruselPrin carousel-caption d-none d-md-block">
+                        <h1>MICROSCOPIO</h1>
+                        <p>El microscopio quirúrgico  MARCA HAGG STREIT MODELO HS 3-1000 hace posible que los cirujanos de especialidades tan diversas como la otorrinolaringología, la cirugía plástica y la neurología, realicen procedimientos complejos en estructuras delicadas. </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/fotos/fotos_inicio/2.jpeg" class="d-block" alt="...">
+                    <div class="caruselPrin carousel-caption d-none d-md-block">
+                        <h1>TOMÓGRAFO </h1>
+                        <p>Contamos con el único equipo más avanzado en la Región Surcolombiana en Resonancia Magnética de 1,5 teslas, MAGNETOM ESSENZA marca SIEMENS con última actualización de software disponible en el mercado. Se realizan diferentes estudios especiales con lectura de médicos especialistas.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="static/fotos/fotos_inicio/4.png" class="d-block" alt="...">
+                    <div class="caruselPrin carousel-caption d-none d-md-block">
+                        <h1>RESONADOR</h1>
+                        <p>A través de su nuevo equipo de tomografía de 160 CORTES  de última generación Toshiba Prime Aquilion, único en el sur del país, Clínica Uros entrega a la región la posibilidad de detectar y prevenir de manera temprana patologías súbitas como infartos o accidentes cerebrovasculares.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <div class="containerInicioDos">
+        <div class="row no-gutters">
+            <div class="col-md-4 col-sm-12 col-lg-6">
+                <div class="tituloSomos">
+                    <span style="color: #85868a;">CLÍNICA <span style="color: #8ac64b;">UROS</span></span>
+                </div>
+                    <p>Clínica UROS S.A es una empresa privada que presta Servicios de Salud
+                    a la comunidad Surcolombiana de Mediana y Alta complejidad, en los
+                    niveles (3) y (4), garantizando la prestación integral en las
+                    diferentes áreas y especialidades de manera oportuna y segura, con
+                    respeto, equidad y humanización en el servicio, buscando mejorar
+                    la calidad de vida de nuestros pacientes y sus familias.</p>
+            </div>    
+            <div class="col-md-4 col-sm-12 col-lg-6">
+                <iframe width="100%" height="298" src="https://www.youtube.com/embed/-L8lCWh-tIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <div class="containerInicioTres" id="citaEnLinea">
+        <div class="servimosCon row aling-items-center py-5 no-gutters">
+            <div class="col-12 d-flex justify-content-center" id="carta">
+                <div class="tituloSer">
+                    <span style="color: #8ac64b;">SERVIMOS CON <span style="color:#85868a;">EL ALMA</span></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+                <div class="card bg-transparent border-0 shadow-lg" style="width: 18rem;">
+                    <img src="static/fotos/fotos_inicio/citas.jpg" class="card-img-top" alt="">
+                    <div class="card-body text-center bg-light">
+                        <h5 class="card-title"><a href="/citaLogin"> CITAS EN LÍNEA</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+                <div class="card bg-transparent border-0 shadow" style="width: 18rem;">
+                    <img src="static/fotos/fotos_inicio/chequeo.jpeg" class="card-img-top" alt="">
+                    <div class="card-body text-center bg-light">
+                        <h5 class="card-title"><a href="/chequeoEjecutivo"> CHEQUEO EJECUTIVO</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+                <div class="card bg-transparent border-0 shadow" style="width: 18rem;">
+                    <img src="static/fotos/fotos_inicio/contrato.jpg" class="card-img-top" alt="">
+                    <div class="card-body text-center bg-light">
+                        <h5 class="card-title"><a href="/trabajeConNosotros"> TRABAJA CON NOSOTROS</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="containerInicioCuatro">
+        <div class="containerCuatroUno mx-auto">
+            <div class="titulonoti">
+                <span style="color: #8ac64b;">NOTICIAS <span style="color:#85868a;">SALUDABLES</span></span>
+            </div>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="containerCuatroDos carousel-indicators">
+                    <button style="background-color: #8ac64b;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button style="background-color: #8ac64b;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button style="background-color: #8ac64b;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner containerCuatroTres">
+                    <div class="carousel-item active">
+                        <img src="static/fotos/fotos_inicio/noti1.jpeg" class="d-block" alt="...">
+                        <div class="carusel1 carousel-caption d-md-block">
+                            <h5>¿CÓMO AUMENTAR LOS GLÓBULOS ROJOS NATURALMENTE?</h5>
+                            <button type="button" class="btn btn-secondary">LEER MAS</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="static/fotos/fotos_inicio/noti2.jpeg" class="d-block" alt="...">
+                        <div class="carusel1 carousel-caption d-md-block">
+                            <h5>DECÁLOGO DE UNA ALIMENTACIÓN SALUDABLE</h5> 
+                            <button type="button" class="btn btn-secondary">LEER MAS</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="static/fotos/fotos_inicio/noti3.jpeg" class="d-block" alt="...">
+                        <div class="carusel1 carousel-caption d-md-block">
+                            <h5>TIP’S PARA EVITAR EL INSOMNIO DURANTE LA PANDEMIA DE COVID19</h5>
+                            <button type="button" class="btn btn-secondary">LEER MAS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+{% endblock %}

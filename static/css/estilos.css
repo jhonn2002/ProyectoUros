@@ -1,0 +1,638 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Header*/
+ 
+.header{
+    background-color: #fffffff3;
+}
+
+.header .menuDos a{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.header .menuDos a img{
+    width: 100%;
+    height: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*Menu*/
+
+.menu{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menu li{
+    border-bottom: 1px solid #8ac64b;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.menu ul li .active{
+    color: rgba(0, 0, 0, 0.719);
+    font-family: "monospace";
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu a:hover , .menu .active:hover{
+    color: #8ac64b;
+}
+
+/*Menu desplegable*/
+
+.menu li .dropdown {
+    display: inline-block;
+}
+
+.menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 270px;
+    z-index: 1;
+    padding: 0px 0px 0px 20px;
+}
+
+
+.menu .dropdown-content a {
+    color: #85868a;
+    font-family: Arial;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.menu .dropdown-content a:hover {
+    color: #8ac64b;
+    padding: 10px;
+    border-left: 2px solid #8ac64b;
+}
+
+.menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu .dropdown-content1 {
+    display: none;
+    position: absolute;
+    min-width: 270px;
+    z-index: 1;
+    left: 270px;
+}
+
+.dropdown-content2{
+    margin-top: -48px;
+    background-color: #f9f9f9;
+}
+
+.menu .dropdown-content1 a {
+    color: #85868a;
+    font-family: Arial;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.menu .dropdown-content1 a:hover {
+    color: #8ac64b;
+}
+
+.menu .dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+section{
+    margin-top: 166px;
+}
+
+@media (max-width: 1000px) {
+    .header .menuDos {
+        display: none;
+    }
+
+    section{
+        margin-top: 74px;
+    }
+
+}
+
+/*Footer*/
+
+footer{
+    background-image: url(../fotos/fondofooter.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.footer{
+    height: auto;
+    text-align:center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    background-color: #fdfdfd8a;
+}
+
+footer div div div{
+    width: 65%;
+}
+
+footer .colunmFooterUna img{
+    width: 100%;
+    height: 150px;
+}
+
+footer .colunmFooterDos{
+    border-left: 1px solid #8ac64b;
+    border-right: 1px solid #8ac64b;
+}
+
+footer h3{
+    font-family: "Arial";
+    font-weight: bold;
+    color: #8ac64b;
+    margin-bottom: 30px;
+}
+
+footer .colunmFooterDos div div{
+    margin-bottom: 10px;
+}
+
+footer .colunmFooterDos div{
+    width: 100%;
+    font-family: "Arial";
+    font-size: 20px;
+    color: #85868a;
+}
+
+
+
+
+
+
+
+/*Pagina Inicio*/
+
+.containerInicioUno{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.containerInicioUno img{
+    width: 100%;
+    height: 480px;
+    border-radius: 45px 45px 0px 0px;
+}
+
+.containerInicioUno .caruselPrin{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid beige;
+    width: 30%;
+    padding: 10px;
+    margin-left: 45%;
+}
+.containerInicioUno .caruselPrin h1{
+    font-family: "Lucida Console";
+    color: #8ac64b;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.containerInicioUno .caruselPrin p{
+    text-align: justify;
+    font-family: "Arial";
+    color: beige;
+    opacity: 8;
+    font-size: 15px;
+}
+
+.containerInicioDos .tituloSomos{
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.containerInicioDos p{
+    text-align: justify;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+    padding: 20px;
+}
+
+
+.containerInicioTres .tituloSer{ 
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.containerInicioTres .servimosCon a{
+    text-decoration: none;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 18px;
+    font-weight: bold;
+    color: #85868a;
+}
+
+.containerPlanCanguro .row button img{
+    max-width: 300px;
+    height: 200px;
+    border-radius: 45px;
+}
+
+.containerInicioTres .servimosCon img{
+    max-width: 300px;
+    height: 200px;
+}
+
+
+.containerInicioCuatro .titulonoti{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.containerInicioCuatro .containerCuatroUno{
+    width: 65%;
+}
+
+.containerInicioCuatro .containerCuatroDos button{
+    background-color: #8ac64b;
+}
+
+.containerInicioCuatro .containerCuatroTres img{
+    border-radius: 10px;
+    width: 100%; 
+    height: 350px;
+}
+
+.containerInicioCuatro h5{
+    font-family: "Arial";
+    font-weight: bold;
+    color: #8ac64b;
+}
+
+.containerInicioCuatro .carusel1{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+
+/*Pagina Contacto*/
+
+.containerUnoContacto .con{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 45%;
+}
+
+.containerUnoContacto a{
+    text-decoration: none;
+    text-align: center;
+    font-family: "Arial";
+    font-size: 25px;
+    font-weight: bold;
+    color: beige;
+}
+
+.cont1{
+    background-image: url(../fotos/fotos_inicio/pqr.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.cont2{
+    background-image: url(../fotos/fotos_inicio/citaslinea.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.tituloSedes{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.containerDosContacto li a{
+    color: #85868a;
+    font-family: Arial;
+}
+
+.containerDosContacto a:hover{
+    color: #8ac64b;
+}
+.containerDosContacto li:hover{
+    color: #8ac64b;
+    box-shadow: 0px 0px 4px 1px #8ac64b;
+}
+
+
+.imagenTA{
+    width: 70%;
+    height: 300px;
+    background-image: url(../fotos/fotos_inicio/torreA.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.imagenTB{
+    width: 50%;
+    height: 300px;
+    background-image: url(../fotos/fotos_inicio/torreB.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.imagenTC{
+    width: 50%;
+    height: 300px;
+    background-image: url(../fotos/fotos_inicio/torreC.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.imagenTD{
+    height: 300px;
+    width: 20%;
+    background-image: url(../fotos/fotos_inicio/torreD.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.imagenCE{
+    height: 300px;
+    width: 50%;
+    background-image: url(../fotos/fotos_inicio/CE.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.imagenLB{
+    height: 300px;
+    width: 50%;
+    background-image: url(../fotos/fotos_inicio/tomaM.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.conteuno{
+    background-image: url(../fotos/fotos_inicio/tomaM.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px 20px 0px 0px;
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+
+/*Pagina Nuestra Clinica*/
+
+.titulosHistoria{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nuestraHistoria{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+}
+.containerUnoHistoria{
+    margin-top: 100px;
+}
+
+.containerDosHistoria p{
+    text-align: justify;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+    padding: 20px;
+}
+
+.containerDosHistoria .titulosHistoria{
+    margin-top: 40px;
+}
+
+.containerDosHistoria li a{
+    color: #85868a;
+    font-family: Arial;
+}
+
+.containerDosHistoria a:hover{
+    color: #8ac64b;
+}
+.containerDosHistoria li:hover{
+    color: #8ac64b;
+    box-shadow: 0px 0px 4px 1px #8ac64b;
+}
+
+.containerDosHistoria .accordion li{
+    color: #85868a;
+    font-family: Arial;
+    font-size: 18px;
+    text-align: justify;
+    text-decoration: none;
+}
+
+/*DerechosDeberes*/
+
+.titulosderechoDeberes{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.derechoDeberes p, button{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+}
+
+.accordion div div div div div div p{
+    padding-left: 15%;
+    padding-right: 10%;
+    text-align: justify;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.derechoDeberes p i{
+    color: #8ac64b;
+    font-family: "Arial";
+}
+
+.tituloTengaEncuenta{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.tituloAsociacionUsuario{
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.lineasp p{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.lineasp a p{
+    color: #8ac64b;
+}
+
+.accordion-header{
+    border: 1px solid beige;
+    background-color: #85868a;
+}
+
+.accordion-header :hover{
+    background-color: #8ac64b;
+}
+
+.accordion-body p{
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+}
+.accordion-body img{
+    width: 100%;
+    height: auto;
+}
+
+.accordion-body table{
+    font-family: "Arial";
+    font-size: 15px;
+    color: black;
+    opacity: 0.7;
+}
+
+.tituloH3{
+    padding-left: 8%;
+    padding-right: 10%;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tituloH4{
+    padding-left: 8%;
+    padding-right: 10%;
+    margin-bottom: 20px;
+    font-family: "Arial";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tablaContacto{
+    width: 50%; 
+    margin-left: 10%;
+    font-family: "Arial";
+    font-size: 18px;
+    color: black;
+    opacity: 0.7;
+}
+
+.tablaContacto .columna1{
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+/*frmCitaLogin*/
+
+
+.formularioCita{
+    border: 1px solid #8ac64b;
+    border-radius: 15px;
+}
+
+.formularioCita input{
+    border-style: inset;
+    border-color: #8ac64b;
+}
+
+.formularioCita select{
+    border-style: inset;
+    border-color: #8ac64b;
+}
+
+.formularioCita textarea{
+    border-style: inset;
+    border-color: #8ac64b;
+}
+
+.formularioCita .tituloSer{ 
+    text-align: center;
+    font-family: "Arial";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+b{
+    font-family: "Arial";
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+/*Servicios*/
+
+.containerServicio img{
+    width: 100%;
+    height: 150px;
+}

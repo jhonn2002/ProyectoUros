@@ -1,0 +1,132 @@
+{% extends 'index.html' %}
+{% block section %}
+
+    <div class="container">
+        
+        <div class="row">
+            <form class="col-lg-7 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita" id="frmCita" name="frmCita" action="" method="post">
+                <div class="row mb-3">
+                    <div class="tituloSer">
+                        <span style="color: #8ac64b;">CITAS EN <span style="color:#85868a;">LÍNEA</span></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <input type="email" class="form-control rounded-pill" id="txtNombre" name="txtNombre" placeholder="Nombres">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="password" class="form-control rounded-pill" id="txtApellido" name="txtApellido" placeholder="Apellidos">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <input type="password" class="form-control rounded-pill" id="txtTelefono" name="txtTelefono" placeholder="Telefono">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control rounded-pill" id="txtDireccion" name="txtDireccion" placeholder="Direccion">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <select id="inputState" name="selectTipoDocumento" class="form-select rounded-pill">
+                            <option selected>Tipo de documento</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" class="form-control rounded-pill" id="txtNumeroDocumento" name="txtNumeroDocumento" placeholder="Numero de documento">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <input type="text" class="form-control rounded-pill" name="txtEntidad" id="txtEntidad" placeholder="Entidad">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Fecha de cita</div>
+                            <input type="date" class="form-control" id="dateCita" name="dateCita">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
+                        <select id="inputState" name="selectTipoCita" class="form-select rounded-pill">
+                            <option selected>Tipo de cita</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <select id="inputState" name="selectGenero" class="form-select rounded-pill">
+                            <option selected>Genero</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 mb-3">
+                        <div class="input-group">
+                            <div class="input-group-text">Fecha de nacimiento</div>
+                            <input type="date" class="form-control" id="dateNacimiento" name="dateNacimiento">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                        <textarea class="form-control" id="txtMensaje" name="txtMensaje" aria-label="With textarea" placeholder="Mensaje"></textarea>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkAcepto">
+                            <label class="form-check-label" for="gridCheck">
+                                Acepto política de tratamiento de la información
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            <form class="col-lg-4 p-3 mx-auto my-auto formularioCita was-validated" id="frmLogin" name="frmLogin" action="/iniciarSesion" method="post">
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="tituloSer">
+                            <span style="color: #8ac64b;">INICIAR <span style="color:#85868a;">SESIÓN</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12 mb-3">
+                        <input type="email" class="form-control rounded-pill" id="txtUsuario" name="txtUsuario" placeholder="Usuario" required>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                        <input type="password" class="form-control rounded-pill" id="txtPassword" name="txtPassword" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </div>
+                </div>
+            </form>
+            <input id="txtRespuesta" name="txtRespuesta" type="hidden" value=" {% if tarea is defined %} {{mensaje}} {%endif%}">
+            <div id="mensaje" style="text-align:center">
+                {% if tarea is defined %}
+                    {% if tarea %}
+                        <script>
+                            sweetAlert({
+                                title:'Problemas!!',
+                                text: $("#txtRespuesta").val(),
+                                type:'warning'
+                            },function(isConfirm){
+                                window.location.href = '/citaLogin';
+                            });
+                        </script>
+                    {%endif%}
+                {%endif%}
+            </div>
+        </div>
+    </div>
+{% endblock %}

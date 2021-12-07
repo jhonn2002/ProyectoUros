@@ -1,0 +1,107 @@
+{% extends 'index.html' %}
+{% block section %}
+<div class="titulosderechoDeberes">
+    <span style="color: #85868a;">GALERÍA DE <span style="color: #8ac64b;">FOTOS</span></span>
+</div>
+
+<br>
+
+<div class="tituloH4">
+    <span style="color: #85868a;">TORRE D – HOSP<span style="color: #8ac64b;">ITALIZACIÓN</span></span>
+</div>
+<div class="containerPlanCanguro" id="">
+    <div class="row aling-items-center py-3 no-gutters">
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('torred1.jpg')">
+                <img src="static/fotos/fotos_inicio/torred1.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('torred2.jpg')">
+                <img src="static/fotos/fotos_inicio/torred2.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('torred3.jpg')">
+                <img src="static/fotos/fotos_inicio/torred3.jpg" alt=""></button>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="tituloH4">
+    <span style="color: #85868a;">PROMOCIÓN 2018 <span style="color: #8ac64b;">PROGRAMA PLAN CANGURO</span></span>
+</div>
+<div class="containerPlanCanguro" id="">
+    <div class="row aling-items-center py-3 no-gutters">
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('planc1.jpg')">
+                <img src="static/fotos/fotos_inicio/planc1.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('planc2.jpg')">
+                <img src="static/fotos/fotos_inicio/planc2.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('planc3.jpg')">
+                <img src="static/fotos/fotos_inicio/planc3.jpg" alt=""></button>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="tituloH4">
+    <span style="color: #85868a;">CAMPAÑA LIDERAZGO Y TRABAJO <span style="color: #8ac64b;">EN EQUIPO – DESAFÍO UROS 2018</span></span>
+</div>
+<div class="containerPlanCanguro" id="">
+    <div class="row aling-items-center py-3 no-gutters">
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('campañal1.jpg')">
+                <img src="static/fotos/fotos_inicio/campañal1.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('campañal2.jpeg')">
+                <img src="static/fotos/fotos_inicio/campañal2.jpeg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('campañal3.jpeg')">
+                <img src="static/fotos/fotos_inicio/campañal3.jpeg" alt=""></button>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="tituloH4">
+    <span style="color: #85868a;">CELEBRACIÓN <span style="color: #8ac64b;">DÍA DEL NIÑO</span></span>
+</div>
+<div class="containerPlanCanguro" id="">
+    <div class="row aling-items-center py-3 no-gutters">
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('dianiño1.jpg')">
+                <img src="static/fotos/fotos_inicio/dianiño1.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('dianiño2.jpg')">
+                <img src="static/fotos/fotos_inicio/dianiño2.jpg" alt=""></button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 d-flex justify-content-center">
+            <button style="border: 0; padding: 0;" onclick="clickFoto('dianiño3.jpg')">
+                <img src="static/fotos/fotos_inicio/dianiño3.jpg" alt=""></button>
+        </div>
+    </div>
+</div>
+<div class="modal mx-auto" id="myModal" style="background: #00000060;">
+    <div class="modal-dialog modal-xl ">
+        <div class="modal-content" style="background: #00000000; border: 0;">
+
+            <!-- Modal body -->
+            <div class="modal-body  mx-auto" >
+                <img id="imgCanguro" src="" class="card-img-top" style="width: auto; max-width: 1000px; height: 500px;" alt=""></a>
+            </div>
+
+            <button type="button" class="btn-close btn-close-white mx-auto" data-bs-dismiss="modal"></button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+{% block section %}
+
+    <div class="container">
+        
+        <div class="row">
+            <form class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto my-auto" id="frmCita" name="frmCita" action="" method="post">
+                <div class="row mb-3">
+                    <div class="tituloSer">
+                        <span style="color: #8ac64b;">CHEQUEO <span style="color:#85868a;">EJECUTIVO</span></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <input type="email" class="form-control rounded-pill" id="txtNombre" name="txtNombre" placeholder="Nombres">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="password" class="form-control rounded-pill" id="txtApellido" name="txtApellido" placeholder="Apellidos">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <input type="password" class="form-control rounded-pill" id="txtTelefono" name="txtTelefono" placeholder="Telefono">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <input type="email" class="form-control rounded-pill" id="txtCorreo" name="txtCorreo" placeholder="Correo">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkAcepto">
+                            <label class="form-check-label" for="gridCheck">
+                                Acepto política de tratamiento de la información
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            <input id="txtRespuesta" name="txtRespuesta" type="hidden" value=" {% if tarea is defined %} {{mensaje}} {%endif%}">
+            <div id="mensaje" style="text-align:center">
+                {% if tarea is defined %}
+                    {% if tarea %}
+                        <script>
+                            sweetAlert({
+                                title:'Problemas!!',
+                                text: $("#txtRespuesta").val(),
+                                type:'warning'
+                            },function(isConfirm){
+                                window.location.href = '/citaLogin';
+                            });
+                        </script>
+                    {%endif%}
+                {%endif%}
+            </div>
+        </div>
+    </div>
+{% endblock %}

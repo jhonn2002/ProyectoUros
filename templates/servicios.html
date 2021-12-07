@@ -1,0 +1,99 @@
+{% extends 'index.html' %}
+{% block section %}
+
+<div class="containerInicioUno" style="margin-bottom: 30px;">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/fotos/fotos_inicio/consultaexterna.jpeg" class="d-block" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="static/fotos/fotos_inicio/gastro1.jpeg" class="d-block" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="containerServicio" id="">
+    <div class="row aling-items-center no-gutters">
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/salaCirugia"><img src="static/fotos/fotos_inicio/cirugia.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/hospitalizacionGeneral"><img src="static/fotos/fotos_inicio/hospitalizacion.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/neuroCirugia"><img src="static/fotos/fotos_inicio/neuro.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/urgencia"><img src="static/fotos/fotos_inicio/urgen.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/hemodinamia"><img src="static/fotos/fotos_inicio/hemodin.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/ginecologia"><img src="static/fotos/fotos_inicio/gineco.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/cardiologia"><img src="static/fotos/fotos_inicio/cardiolo.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/cardiovascular"><img src="static/fotos/fotos_inicio/cardiovascular.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/gastroenterologia"><img src="static/fotos/fotos_inicio/unigastro.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/hospiCasa"><img src="static/fotos/fotos_inicio/hospitalizacioncasa.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/imagenologia"><img src="static/fotos/fotos_inicio/imageno.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/laboratorio"><img src="static/fotos/fotos_inicio/labora.png" alt=""></a>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            
+            <div class="menu" style="width: auto;">
+                <div class="nav-item dropdown">
+                    <a class="nav-link active"><img src="static/fotos/fotos_inicio/uci.png" alt=""></a>
+                    <div class="dropdown-content" style="left: 150px; margin-top: -35px;">
+                        <a class="nav-link" href="/contacto#pqr">Cuidado intensivo adulto general</a>
+                        <a class="nav-link" href="/#citaEnLinea">Cuidado intensivo quirúrgico</a>
+                        <a class="nav-link" href="/derechosDeberes">Cuidado intensivo neonatal</a>
+                        <a class="nav-link" href="/derechosDeberes#asociacionUsuario">Cuidado intensivo pediatria</a>
+                        <a class="nav-link" href="/derechosDeberes#horarioVisitas">Cuidado intermedio adulto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            
+            <div class="menu" style="width: auto;">
+                <div class="nav-item dropdown">
+                    <a href=""><img src="static/fotos/fotos_inicio/otros.png" alt=""></a>
+                    <div class="dropdown-content" style="left: 150px; margin-top: -27px;">
+                        <a class="nav-link" href="/contacto#pqr">Traslado Ambulancia Básica</a>
+                        <a class="nav-link" href="/#citaEnLinea">Traslado Ambulancia Medicalizada</a>
+                        <a class="nav-link" href="/derechosDeberes">Clínica de heridas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-lg-6 d-flex justify-content-center">
+            <a href="/consultaExterna"><img src="static/fotos/fotos_inicio/consulexterna.png" alt=""></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
