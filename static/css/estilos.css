@@ -6,19 +6,15 @@
 /*Header*/
  
 .header{
-    background-color: #fffffff3;
+    background-color: #ffffff;
 }
 
-.header .menuDos a{
-    margin-left: 40px;
-    margin-right: 40px;
-}
 
 .header .menuDos a img{
-    width: 100%;
+    width: 260px;
     height: 60px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*Menu*/
@@ -30,8 +26,8 @@
 
 .menu li{
     border-bottom: 1px solid #8ac64b;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .menu ul li .active{
@@ -54,7 +50,7 @@
 .menu .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background: #ffffff;
     min-width: 270px;
     z-index: 1;
     padding: 0px 0px 0px 20px;
@@ -86,11 +82,12 @@
     min-width: 270px;
     z-index: 1;
     left: 270px;
+    background: #ffffff;
 }
 
 .dropdown-content2{
     margin-top: -48px;
-    background-color: #f9f9f9;
+    background: #ffffff;
 }
 
 .menu .dropdown-content1 a {
@@ -115,7 +112,7 @@ section{
 }
 
 @media (max-width: 1000px) {
-    .header .menuDos {
+    .header .menuDos, .logomenu {
         display: none;
     }
 
@@ -190,7 +187,6 @@ footer .colunmFooterDos div{
 .containerInicioUno img{
     width: 100%;
     height: 480px;
-    border-radius: 45px 45px 0px 0px;
 }
 
 .containerInicioUno .caruselPrin{
@@ -636,3 +632,9 @@ b{
     width: 100%;
     height: 150px;
 }
+
+
+
+
+
+

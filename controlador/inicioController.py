@@ -113,6 +113,14 @@ def imagenologia():
 def laboratorio():
     return render_template('laboratorio.html')
 
+@app.route('/cuidadosIntensivos')
+def cuidadosIntensivos():
+    return render_template('cuidadosIntensivos.html')
+
+@app.route('/otros')
+def otros():
+    return render_template('otros.html')
+
 #Rutas del usuario
 
 @app.route("/inicioUsuario")
