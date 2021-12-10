@@ -8,6 +8,7 @@ app.secret_key = os.urandom(32) #es neceario para poder crear variables de sesi√
 
 #cadena de conexi√≥n a la base de datos
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Jhonn2002*@localhost/urosoft'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://Jhonn2002:Cupitre2002*@Jhonn2002.mysql.pythonanywhere-services.com/Jhonn2002$urosoft'
 
 db = SQLAlchemy(app)
 

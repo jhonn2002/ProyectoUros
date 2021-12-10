@@ -1,6 +1,30 @@
 {% extends 'index.html' %}
 {% block section %}
-    <div class="derechoDeberes row">
+
+    <div class="containerInicioUno" style="margin-bottom: 30px;">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" style="border-radius: 50px;">
+            <div class="carousel-inner">
+                <div class="carousel-item active d-flex justify-content-center">
+                    <img style="width: 60%; height: auto;" src="static/fotos/fotos_inicio/siau1.jpg" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item d-flex justify-content-center">
+                    <img style="width: 60%; height: auto;" src="static/fotos/fotos_inicio/siau2.jpg" class="d-block" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="derechoDeberes row no-gutters">
         <div class="col-md-4 col-sm-12 col-lg-12">
             <div class="titulosderechoDeberes">
                 <span style="color: #85868a;">DERECHOS Y DEBERES<span style="color: #8ac64b;"> DE LOS PACIENTES </span></span>
@@ -16,11 +40,19 @@
     <br>
     <br>
     <br>
-    <div class="derechoDeberes row">
+    <div class="derechoDeberes row no-gutters">
         <div class="col-md-4 col-sm-12 col-lg-6">
             <div class="titulosderechoDeberes">
                 <span style="color: #85868a;">DERE<span style="color: #8ac64b;">CHOS</span></span>
             </div>
+
+            <br>
+            <div class="d-flex justify-content-center">
+                <img style="width: 70%; height: auto; border-radius: 15px;" src="static/fotos/fotos_inicio/siau1.jpg" alt="">
+            </div>
+            <br>
+            <br>
+
             <div><p><i class="bi bi-check2-square"></i> Acceder a los servicios sin que le impongan trámites administrativos adicionales a los de ley. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Que le autoricen y presten los servicios incluidos en el Plan de Bene­cios de manera oportuna, si requiere un servicio que no esté incluido, también lo puede recibir. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Que en caso de urgencia, sea atendido de manera inmediata, sin que le exijan documentos o dinero. </p></div>
@@ -52,13 +84,19 @@
             <div><p><i class="bi bi-check2-square"></i> Brindar la información requerida para la atención médica y contribuir con los gastos de acuerdo con su capacidad económica. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Cumplir las normas y actuar de buena fe frente al Sistema de Salud. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Actuar de manera solidaria ante las situaciones que pongan en peligro la vida o la salud de las personas. </p></div>
-            <div><p><i class="bi bi-check2-square"></i> Respetar al personal de salud y cuidar las instalaciones donde le presten dichos servicios. </p></div>        
+            <div><p><i class="bi bi-check2-square"></i> Respetar al personal de salud y cuidar las instalaciones donde le presten dichos servicios. </p></div>    
+            <br>
+
+            <div class="d-flex justify-content-center">
+                <img style="width: 70%; height: auto; border-radius: 15px;" src="static/fotos/fotos_inicio/siau3.jpg" alt="">
+            </div>
+
         </div>  
     </div>
 
     <br>
     <br>
-    <div class="derechoDeberes row">
+    <div class="derechoDeberes row no-gutters">
         <div class="col-md-4 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">TENGA EN <span style="color: #8ac64b;">CUENTA:</span></span>
@@ -74,7 +112,7 @@
 
     <br>
     <br>
-    <div class="derechoDeberes row">
+    <div class="derechoDeberes row no-gutters">
         <div class="col-md-4 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">PAUTAS <span style="color: #8ac64b;">GENERALES:</span></span>
@@ -96,7 +134,7 @@
 
     <br>
     <br>
-    <div class="derechoDeberes row" id="asociacionUsuario">
+    <div class="derechoDeberes row no-gutters" id="asociacionUsuario">
         <div class="col-md-4 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">ASOCIACIÓN <span style="color: #8ac64b;">DE USUARIOS: </span></span>
@@ -154,16 +192,19 @@
             </form>
         </div> 
         <div class="lineasp col-md-4 col-sm-12 col-lg-6 mx-auto my-auto">
+            <img style="width: 100%; height: auto;" src="static/fotos/fotos_inicio/acur.jpg" alt="">
+        </div>    
+
+        <div class="lineasp col-md-4 col-sm-12 col-lg-12 mx-auto my-auto">
             <p>Informes: Oficina de Atención al Usuario Teléfono: 8725400</p>
             <p>Ext.  129 Línea Gratuita: 018000180627 E-mail:</p>
             <a class="nav-link" href="#"><p>servicioalcliente@clinicauros.com</p></a>
-        </div>    
+        </div> 
     </div>
 
+
     <br>
-    <br>
-    <br>
-    <div class="derechoDeberes row mx-auto" style="width: 90%;" id="normasPoliticas">
+    <div class="derechoDeberes row mx-auto no-gutters" style="width: 90%;" id="normasPoliticas">
         <div class="titulosderechoDeberes">
             <span style="color: #85868a;">NORMAS Y POLÍTICAS ESTABLECIDAS <span style="color: #8ac64b;">PARA EL INGRESO A LA CLÍNICA:</span></span>
         </div>
@@ -173,6 +214,11 @@
             <div><p><i class="bi bi-check2-square"></i> Todo usuario debe presentar un documento de identidad para el ingreso. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Se debe cumplir con los horarios de visita definidos y no circular por áreas restringidas. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Tratar con respeto y dignidad al personal que lo atiende y respetar la intimidad de los otros pacientes. </p></div>
+            <br>
+
+            <div class="d-flex justify-content-center">
+                <img style="width: 70%; height: auto; border-radius: 15px;" src="static/fotos/fotos_inicio/siau2.jpg" alt="">
+            </div>
         </div> 
         <div class="col-md-4 col-sm-12 col-lg-6">
             <div><p><i class="bi bi-check2-square"></i> Cumplir puntualmente las citas médicas y de servicios; debe informar previamente, su cancelación o aplazamiento. </p></div>
@@ -186,7 +232,7 @@
 
     <br>
     <br>
-    <div class="derechoDeberes row mx-auto" style="width: 80%;" id="preparacionExamenes">
+    <div class="derechoDeberes row mx-auto no-gutters" style="width: 80%;" id="preparacionExamenes">
         <div class="titulosderechoDeberes">
             <span style="color: #85868a;">PREPARACIÓN PARA <span style="color: #8ac64b;">EXÁMENES</span></span>
         </div>
@@ -285,7 +331,7 @@
 
     <br>
     <br>
-    <div class="derechoDeberes row mx-auto" style="width: 80%;" id="horarioVisitas">
+    <div class="derechoDeberes row mx-auto no-gutters" style="width: 80%;" id="horarioVisitas">
         <div class="titulosderechoDeberes">
             <span style="color: #85868a;">HORARIO DE <span style="color: #8ac64b;">VISITAS</span></span>
         </div>
@@ -369,7 +415,7 @@
 
     <br>
     <br>
-    <div class="derechoDeberes row" id="politicasDeParticipacion">
+    <div class="derechoDeberes row no-gutters" id="politicasDeParticipacion">
         <div class="col-md-4 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">POLÍTICA DE PARTICIPACIÓN <span style="color: #8ac64b;">SOCIAL EN SALUD (PPSS):</span></span>
@@ -444,7 +490,7 @@
             </tr>
             <tr>
                 <td class="columna1">Presencial</td>
-                <td>Proceso personalizado en la Oficina de Atención al Usuario ubicada en el primer piso de Consulta Externa en horario hábil.</td>
+                <td>Proceso personalizado en la Oficina de Atención al Usuario ubicada en el segundo piso de Consulta Externa en horario hábil.</td>
             </tr>
             <tr>
                 <td class="columna1">Buzones</td>
@@ -453,7 +499,7 @@
         </tbody>
     </table>
     <br>
-    <div class="derechoDeberes row">
+    <div class="derechoDeberes row no-gutters">
         <div class="col-md-4 col-sm-12 col-lg-12">
             <p>Como política de control y calidad, Clínica Uros S.A.S trabaja sobre indicadores y la gestión de participación social, por lo tanto, se rinden indicadores mes a mes sobre la gestión realizadas de las PQRSF, para su revisión y planes de mejoramiento. Se genera sensibilización y oportunidad por parte de los líderes de cada proceso para contestar las inquietudes que formulan los ciudadanos.</p>
         </div>    
