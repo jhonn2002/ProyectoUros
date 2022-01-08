@@ -1,1 +1,0 @@
-from modelo.rol import *

@@ -1,10 +1,10 @@
 {% extends 'index.html' %}
 {% block section %}
-
+    <script src="../static/js/frmCitaLogin.js"></script>
     <div class="container">
         
         <div class="row">
-            <form class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto my-auto" id="frmCita" name="frmCita" action="" method="post">
+            <form class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto my-auto was-validated" id="frmPqr" name="frmPqr" action="/informacionPqr" method="post">
                 <div class="row mb-3">
                     <div class="tituloSer">
                         <span style="color: #8ac64b;">PQ<span style="color:#85868a;">R</span></span>
@@ -12,56 +12,55 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
-                        <select id="inputState" name="selectTipoCita" class="form-select rounded-pill">
-                            <option selected>Selecione asunto</option>
-                            <option>Queja</option>
-                            <option>felicitaciones</option>
-                            <option>Reclamo</option>
-                            <option>Sugerencia</option>
+                        <select id="inputState" name="selectTipoSoli" class="form-select" required>
+                            <option selected value="Queja">Queja</option>
+                            <option value="felicitaciones">felicitaciones</option>
+                            <option value="Reclamo">Reclamo</option>
+                            <option value="Sugerencia">Sugerencia</option>
                         </select>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" class="form-control rounded-pill" id="txtNombre" name="txtNombre" placeholder="Nombre y Apellido">
+                        <input type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Nombre y Apellido" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="text" class="form-control rounded-pill" id="txtServicio" name="txtServicio" placeholder="Servicio donde fue atendido">
+                        <input type="text" class="form-control" id="txtServicio" name="txtServicio" placeholder="Servicio donde fue atendido" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" class="form-control rounded-pill" id="txtNumeroCedula" name="txtNumeroCedula" placeholder="Número de cedula">
+                        <input type="number" class="form-control" id="txtNumeroCedula" name="txtNumeroCedula" placeholder="Número de cedula" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="email" class="form-control rounded-pill" id="txtDireccion" name="txtDireccion" placeholder="Dirección">
+                        <input type="text" class="form-control" id="txtDireccion" name="txtDireccion" placeholder="Dirección" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="password" class="form-control rounded-pill" id="txtBarrio" name="txtBarrio" placeholder="Barrio">
+                        <input type="text" class="form-control" id="txtBarrio" name="txtBarrio" placeholder="Barrio" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="password" class="form-control rounded-pill" id="txtTelefono" name="txtTelefono" placeholder="Telefono">
+                        <input type="number" class="form-control" id="txtTelefono" name="txtTelefono" placeholder="Telefono" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="email" class="form-control rounded-pill" id="txtCorreo" name="txtCorreo" placeholder="Correo">
+                        <input type="email" class="form-control" id="txtCorreo" name="txtCorreo" placeholder="Correo" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="email" class="form-control rounded-pill" id="txtEntidad" name="txtEntidad" placeholder="Entidad a la que se encuentra afiliado">
+                        <input type="text" class="form-control" id="txtEntidad" name="txtEntidad" placeholder="Entidad a la que se encuentra afiliado" required>
                     </div>
                     <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
-                        <textarea class="form-control" id="txtMensaje" name="txtMensaje" aria-label="With textarea" placeholder="Mensaje"></textarea>
+                        <textarea class="form-control" id="txtMensaje" name="txtMensaje" aria-label="With textarea" placeholder="Mensaje" required></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkAcepto">
+                            <input class="form-check-input" type="checkbox" id="checkAcepto" required>
                             <label class="form-check-label" for="gridCheck">
-                                Acepto política de tratamiento de la información
+                                <a style="color: #85868a;" href="/tratamientoDeDatos"> Acepto política de tratamiento de la información</a>
                             </label>
                         </div>
                     </div>
@@ -72,21 +71,28 @@
                     </div>
                 </div>
             </form>
-            <input id="txtRespuesta" name="txtRespuesta" type="hidden" value=" {% if tarea is defined %} {{mensaje}} {%endif%}">
+            {% if mensaje is defined %}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="{{mensaje}}">
+            {%else%}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="">
+            {%endif%} 
+            
             <div id="mensaje" style="text-align:center">
+
                 {% if tarea is defined %}
-                    {% if tarea %}
-                        <script>
-                            sweetAlert({
-                                title:'Problemas!!',
-                                text: $("#txtRespuesta").val(),
-                                type:'warning'
-                            },function(isConfirm){
-                                window.location.href = '/citaLogin';
-                            });
-                        </script>
+                    {% if tarea == "informacionPqr" %}
+                        {% if estado %}
+                            <script>
+                                alertaTruePqr()
+                            </script>
+                        {%else%}
+                            <script>
+                                alertaFalsePqr()
+                            </script>
+                        {%endif%}
                     {%endif%}
                 {%endif%}
+            
             </div>
         </div>
     </div>

@@ -1,10 +1,10 @@
 {% extends 'index.html' %}
 {% block section %}
-
+    <script src="../static/js/frmCitaLogin.js"></script>
     <div class="container">
         
         <div class="row">
-            <form class="col-lg-5 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto my-auto" id="frmCita" name="frmCita" action="" method="post">
+            <form class="col-lg-5 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto my-auto was-validated" id="frmTrabajeConNosotros" name="frmTrabajeConNosotros" action="/trabajeConUros" method="post" enctype="multipart/form-data">
                 <div class="row mb-3">
                     <div class="tituloSer">
                         <span style="color: #8ac64b;">TRABAJA CON <span style="color:#85868a;">NOSOTROS</span></span>
@@ -12,21 +12,21 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12">
-                        <input type="email" class="form-control rounded-pill" id="txtCorreo" name="txtCorreo" placeholder="Correo">
+                        <input type="email" class="form-control" id="txtCorreo" name="txtCorreo" placeholder="Correo" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12 col-md-6 col-sm-6 col-xs-12 ">
-                        <input type="file" class="form-control rounded-pill" aria-label="file example" required>
-                        <div class="invalid-feedback">Example invalid form file feedback</div>
+                        <input type="file" class="form-control" aria-label="file example" name="archivoTrabaje" accept=".pdf" required>
+                        <div class="invalid-feedback">Seleccione Hoja de vida</div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkAcepto">
+                            <input class="form-check-input" type="checkbox" id="checkAcepto" required>
                             <label class="form-check-label" for="gridCheck">
-                                Acepto política de tratamiento de la información
+                                <a style="color: #85868a;" href="/tratamientoDeDatos"> Acepto política de tratamiento de la información</a>
                             </label>
                         </div>
                     </div>
@@ -37,21 +37,28 @@
                     </div>
                 </div>
             </form>
-            <input id="txtRespuesta" name="txtRespuesta" type="hidden" value=" {% if tarea is defined %} {{mensaje}} {%endif%}">
+            {% if mensaje is defined %}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="{{mensaje}}">
+            {%else%}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="">
+            {%endif%} 
+            
             <div id="mensaje" style="text-align:center">
+
                 {% if tarea is defined %}
-                    {% if tarea %}
-                        <script>
-                            sweetAlert({
-                                title:'Problemas!!',
-                                text: $("#txtRespuesta").val(),
-                                type:'warning'
-                            },function(isConfirm){
-                                window.location.href = '/citaLogin';
-                            });
-                        </script>
+                    {% if tarea == "trabajeConUros" %}
+                        {% if estado %}
+                            <script>
+                                alertaTrueTrabaje()
+                            </script>
+                        {%else%}
+                            <script>
+                                alertaFalseTrabaje()
+                            </script>
+                        {%endif%}
                     {%endif%}
                 {%endif%}
+            
             </div>
         </div>
     </div>

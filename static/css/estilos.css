@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body{
+    max-width: 1500px;
+}
+
 /*Header*/
  
 .header{
@@ -349,7 +353,7 @@ footer .colunmFooterDos div{
     background-image: url(../fotos/fotos_inicio/torreA.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .imagenTB{
@@ -358,7 +362,7 @@ footer .colunmFooterDos div{
     background-image: url(../fotos/fotos_inicio/torreB.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .imagenTC{
@@ -367,7 +371,7 @@ footer .colunmFooterDos div{
     background-image: url(../fotos/fotos_inicio/torreC.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .imagenTD{
@@ -376,7 +380,7 @@ footer .colunmFooterDos div{
     background-image: url(../fotos/fotos_inicio/torreD.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .imagenCE{
@@ -385,7 +389,7 @@ footer .colunmFooterDos div{
     background-image: url(../fotos/fotos_inicio/CE.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .imagenLB{
@@ -394,7 +398,7 @@ footer .colunmFooterDos div{
     background-image: url(../fotos/fotos_inicio/tomaM.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .conteuno{
@@ -634,7 +638,12 @@ b{
 }
 
 
-
+.tabladire1 tr, .tabladire1 tr td{
+    border: 4px double #85868a;
+    padding: 5px 5px 2px 2px;
+    margin: 0;
+    font-family: 'Times New Roman';
+}
 
 
 

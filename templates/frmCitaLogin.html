@@ -1,10 +1,10 @@
 {% extends 'index.html' %}
 {% block section %}
-
+    <script src="../static/js/frmCitaLogin.js"></script>
     <div class="container">
         
         <div class="row">
-            <form class="col-lg-7 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto" id="frmCita" name="frmCita" action="" method="post">
+            <form class="col-lg-7 col-md-12 col-sm-12 col-xs-12 p-3 formularioCita mx-auto was-validated" id="frmCita" name="frmCita" action="/citasEnLinea" method="post">
                 <div class="row mb-3">
                     <div class="tituloSer">
                         <span style="color: #8ac64b;">CITAS EN <span style="color:#85868a;">LÍNEA</span></span>
@@ -12,74 +12,109 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="text" class="form-control rounded-pill" id="txtNombre" name="txtNombre" placeholder="Nombres">
+                        <input type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Nombres" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" class="form-control rounded-pill" id="txtApellido" name="txtApellido" placeholder="Apellidos">
+                        <input type="text" class="form-control" id="txtApellido" name="txtApellido" placeholder="Apellidos" required>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="text" class="form-control rounded-pill" id="txtTelefono" name="txtTelefono" placeholder="Telefono">
+                        <input type="text" class="form-control" id="txtTelefono" name="txtTelefono" placeholder="Telefono" required>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" class="form-control rounded-pill" id="txtDireccion" name="txtDireccion" placeholder="Direccion">
+                        <input type="text" class="form-control" id="txtDireccion" name="txtDireccion" placeholder="Direccion" required>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <select id="inputState" name="selectTipoDocumento" class="form-select rounded-pill">
-                            <option selected>Tipo de documento</option>
-                            <option>T.I</option>
-                            <option>C.U</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" class="form-control rounded-pill" id="txtNumeroDocumento" name="txtNumeroDocumento" placeholder="Numero de documento">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="text" class="form-control rounded-pill" name="txtEntidad" id="txtEntidad" placeholder="Entidad">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="input-group">
-                            <div class="input-group-text">Fecha de cita</div>
-                            <input type="date" class="form-control" id="dateCita" name="dateCita">
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
-                        <select id="inputState" name="selectTipoCita" class="form-select rounded-pill">
-                            <option selected>Tipo de cita</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <select id="inputState" name="selectGenero" class="form-select rounded-pill">
-                            <option selected>Genero</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                </div>
+
                 <div class="row mb-3">
                     <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 mb-3">
                         <div class="input-group">
                             <div class="input-group-text">Fecha de nacimiento</div>
-                            <input type="date" class="form-control" id="dateNacimiento" name="dateNacimiento">
+                            <input type="date" class="form-control" id="dateNacimiento" name="dateNacimiento" required>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
-                        <textarea class="form-control" id="txtMensaje" name="txtMensaje" aria-label="With textarea" placeholder="Mensaje"></textarea>
+                    <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
+                        <input type="email" class="form-control" id="txtCorreo" name="txtCorreo" placeholder="Correo" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <select id="inputState" name="selectGenero" class="form-select">
+                            <option selected value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12">
+                        <div class="input-group">
+                            <div class="input-group-text">Fecha probable de Cita</div>
+                            <input type="date" class="form-control" id="dateCita" name="dateCita" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb-3">
+                        <select id="inputState" name="selectTipoCita" class="form-select">
+                            <option selected value="ANESTESIOLOGÍA">ANESTESIOLOGÍA</option>
+                            <option value="CARDIOLOGÍA ADULTOS">CARDIOLOGÍA ADULTOS</option>
+                            <option value="CARDIOLOGÍA PEDIÁTRICA">CARDIOLOGÍA PEDIÁTRICA</option>
+                            <option value="CIRUGÍA CARDIOVASCULAR">CIRUGÍA CARDIOVASCULAR</option>
+                            <option value="CIRUGÍA DE TÓRAX">CIRUGÍA DE TÓRAX</option>
+                            <option value="CIRUGÍA VASCULAR PERIFÉRICA">CIRUGÍA VASCULAR PERIFÉRICA</option>
+                            <option value="CIRUJANO DE CABEZA Y CUELLO">CIRUJANO DE CABEZA Y CUELLO</option>
+                            <option value="CIRUJANO DE MANO">CIRUJANO DE MANO</option>
+                            <option value="CIRUJANO GENERAL">CIRUJANO GENERAL</option>
+                            <option value="CIRUJANO ORAL Y MAXILOFACIAL">CIRUJANO ORAL Y MAXILOFACIAL</option>
+                            <option value="CIRUJANO PEDIATRA">CIRUJANO PEDIATRA</option>
+                            <option value="CIRUJANO PLÁSTICO">CIRUJANO PLÁSTICO</option>
+                            <option value="CLÍNICA DEL DOLOR">CLÍNICA DEL DOLOR</option>
+                            <option value="DERMATOLOGÍA">DERMATOLOGÍA</option>
+                            <option value="FISIATRÍA">FISIATRÍA</option>
+                            <option value="FONOAUDIOLOGÍA">FONOAUDIOLOGÍA</option>
+                            <option value="GASTROENTEROLOGÍA">GASTROENTEROLOGÍA</option>
+                            <option value="GINECÓLOGO-OBSTETRA">GINECÓLOGO-OBSTETRA</option>
+                            <option value="MEDICINA DEL TRABAJO">MEDICINA DEL TRABAJO</option>
+                            <option value="MEDICINA GENERAL">MEDICINA GENERAL</option>
+                            <option value="MEDICINA INTERNA">MEDICINA INTERNA</option>
+                            <option value="NEUMOLOGÍA">NEUMOLOGÍA</option>
+                            <option value="NEUROCIRUGÍA">NEUROCIRUGÍA</option>
+                            <option value="NEUROLOGÍA ADULTOS">NEUROLOGÍA ADULTOS</option>
+                            <option value="NEUROLOGÍA PEDIÁTRICA">NEUROLOGÍA PEDIÁTRICA</option>
+                            <option value="NUTRICIONISTA DIETISTA">NUTRICIONISTA DIETISTA</option>
+                            <option value="ORTOPEDIA">ORTOPEDIA</option>
+                            <option value="OTORRINOLARINGOLOGÍA">OTORRINOLARINGOLOGÍA</option>
+                            <option value="PEDIATRÍA">PEDIATRÍA</option>
+                            <option value="PSICOLOGÍA">PSICOLOGÍA</option>
+                            <option value="PSIQUIATRÍA">PSIQUIATRÍA</option>
+                            <option value="REUMATOLOGÍA">REUMATOLOGÍA</option>
+                            <option value="TERAPIA DE LENGUAJE">TERAPIA DE LENGUAJE</option>
+                            <option value="TERAPIA DE REHABILITACIÓN CARDÍACA">TERAPIA DE REHABILITACIÓN CARDÍACA</option>
+                            <option value="TERAPIA DE REHABILITACIÓN PULMONAR">TERAPIA DE REHABILITACIÓN PULMONAR</option>
+                            <option value="TERAPIA FÍSICA">TERAPIA FÍSICA</option>
+                            <option value="TERAPIA RESPIRATORIA">TERAPIA RESPIRATORIA</option>
+                            <option value="TERAPIA OCUPACIONAL">TERAPIA OCUPACIONAL</option>
+                            <option value="CIRUGÍA">CIRUGÍA</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
+                        <input type="text" class="form-control" name="txtEntidad" id="txtEntidad" placeholder="Entidad" required>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                        <textarea class="form-control" id="txtMensaje" name="txtMensaje" aria-label="With textarea" placeholder="Mensaje" required></textarea>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="checkAcepto">
+                            <input class="form-check-input" type="checkbox" id="checkAcepto" name="checkAcepto" required>
                             <label class="form-check-label" for="gridCheck">
-                                Acepto política de tratamiento de la información
+                                <a style="color: #85868a;" href="/tratamientoDeDatos"> Acepto política de tratamiento de la información</a>
                             </label>
                         </div>
                     </div>
@@ -90,21 +125,29 @@
                     </div>
                 </div>
             </form>
-            <input id="txtRespuesta" name="txtRespuesta" type="hidden" value=" {% if tarea is defined %} {{mensaje}} {%endif%}">
+            
+            {% if mensaje is defined %}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="{{mensaje}}">
+            {%else%}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="">
+            {%endif%}
+            
             <div id="mensaje" style="text-align:center">
+
                 {% if tarea is defined %}
-                    {% if tarea %}
-                        <script>
-                            sweetAlert({
-                                title:'Problemas!!',
-                                text: $("#txtRespuesta").val(),
-                                type:'warning'
-                            },function(isConfirm){
-                                window.location.href = '/citaLogin';
-                            });
-                        </script>
+                    {% if tarea == "agregarcitas" %}
+                        {% if estado %}
+                            <script>
+                                alertaTrue()
+                            </script>
+                        {%else%}
+                            <script>
+                                alertaFalse()
+                            </script>
+                        {%endif%}
                     {%endif%}
                 {%endif%}
+            
             </div>
         </div>
     </div>

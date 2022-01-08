@@ -1,1 +1,0 @@
-from modelo.persona import *

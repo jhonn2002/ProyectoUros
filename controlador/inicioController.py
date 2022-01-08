@@ -1,8 +1,5 @@
 from app import app
-from flask import render_template, session, request
-
-from modelo.usuarioRol import *
-from modelo.formularioRol import *
+from flask import render_template
 
 #Rutas de paginas principal
 @app.route('/')
@@ -121,82 +118,10 @@ def cuidadosIntensivos():
 def otros():
     return render_template('otros.html')
 
-#Rutas del usuario
+@app.route('/noticiaSaludable')
+def noticiaSaludable():
+    return render_template('noticiaSaludable.html')
 
-@app.route("/inicioUsuario")
-def inicioUsuario():
-    tarea=False
-    fr=[]
-    ur=[]
-    if("user" in session and "id" in session):
-        ur = UsuarioRol.query.filter(UsuarioRol.usurol_id_usuario==session["id"]).all()
-        if not ur is None:
-            for aur in ur:
-                if aur.usurol_id_rol == 2:
-                    fr = FormularioRol.query.filter(FormularioRol.forrol_id_rol==2).all()
-                    return render_template("usuario/inicio.html", fr=fr, ur=ur)
-                else:
-                    mensaje="Error de permisos" 
-                    tarea=True
-        else:
-            mensaje="No tiene asignado un rol por favor comunicarse con el servicio encargado 'Sistema'" 
-            tarea=True 
-    else:
-        tarea=True
-        mensaje="Debe primero iniciar Sesion"
-    return render_template("frmCitaLogin.html",mensaje=mensaje, tarea=tarea)
-
-
-#Rutas del administrador
-@app.route("/inicioAdministrador")
-def inicioAdministrador():
-    tarea=False
-    fr=[]
-    ur=[]
-    if("user" in session and "id" in session):
-        ur = UsuarioRol.query.filter(UsuarioRol.usurol_id_usuario==session["id"]).all()
-        if not ur is None:
-            for aur in ur:
-                if aur.usurol_id_rol == 1:
-                    fr = FormularioRol.query.filter(FormularioRol.forrol_id_rol==1).all()
-                    return render_template("usuario/inicioAdmi.html", fr=fr, ur=ur)
-                else:
-                    mensaje="Error de permisos" 
-                    tarea=True 
-        else:
-            mensaje="No tiene asignado un rol por favor comunicarse con el servicio encargado 'Sistema'" 
-            tarea=True 
-    else:
-        tarea=True
-        mensaje="Debe primero iniciar Sesion"
-    return render_template("frmCitaLogin.html",mensaje=mensaje, tarea=tarea)
-
-
-@app.route("/rol", methods=['GET'])
-def rol():
-    tarea=False
-    fr=[]
-    ur=[]
-    idRol = int(request.args.get('idRol'))
-    if("user" in session and "id" in session):
-        ur = UsuarioRol.query.filter(UsuarioRol.usurol_id_usuario==session["id"]).all()
-        if ur!=None:
-            fr = FormularioRol.query.filter(FormularioRol.forrol_id_rol==idRol).all()
-            if idRol == 1:
-                return render_template("usuario/inicioAdmi.html", fr=fr, ur=ur)
-            elif idRol == 2:
-                return render_template("usuario/inicio.html", fr=fr, ur=ur)
-        else:
-            mensaje="No tiene asignado un rol por favor comunicarse con el servicio encargado 'Sistema'" 
-            tarea=True 
-    else:
-        tarea=True
-        mensaje="Debe primero iniciar Sesion"
-    return render_template("frmCitaLogin.html",mensaje=mensaje, tarea=tarea)
-
-@app.route("/salir")
-def salir():
-    session.clear()
-    tarea=True
-    mensaje="Ha cerrado la sesión"
-    return render_template("frmCitaLogin.html",mensaje=mensaje,tarea=tarea)
+@app.route('/tratamientoDeDatos')
+def tratamientoDeDatos():
+    return render_template('tratamientoDeDatos.html')
