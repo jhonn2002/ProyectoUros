@@ -1,10 +1,11 @@
 {% extends 'index.html' %}
 {% block section %}
 
+    <script src="../static/js/frmCitaLogin.js"></script>
     <br>
 
     <div class="derechoDeberes row no-gutters">
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="titulosderechoDeberes">
                 <span style="color: #85868a;">DERECHOS Y DEBERES<span style="color: #8ac64b;"> DE LOS PACIENTES </span></span>
             </div>
@@ -20,7 +21,7 @@
     <br>
     <br>
     <div class="derechoDeberes row no-gutters">
-        <div class="col-md-4 col-sm-12 col-lg-6">
+        <div class="col-md-12 col-sm-12 col-lg-6">
             <div class="titulosderechoDeberes">
                 <span style="color: #85868a;">DERE<span style="color: #8ac64b;">CHOS</span></span>
             </div>
@@ -54,7 +55,7 @@
             <div><p><i class="bi bi-check2-square"></i> Que le informen dónde y cómo pueden presentar quejas o reclamos sobre la atención en salud prestada. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Que se mantenga estricta confidencialidad sobre su información clínica. </p></div>
         </div>  
-        <div class="col-md-4 col-sm-12 col-lg-6">
+        <div class="col-md-12 col-sm-12 col-lg-6">
             <div class="titulosderechoDeberes">
                 <span style="color: #85868a;">DEB<span style="color: #8ac64b;">ERES COMO PACIENTE</span></span>
             </div>
@@ -76,7 +77,7 @@
     <br>
     <br>
     <div class="derechoDeberes row no-gutters">
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">TENGA EN <span style="color: #8ac64b;">CUENTA:</span></span>
             </div>
@@ -92,7 +93,7 @@
     <br>
     <br>
     <div class="derechoDeberes row no-gutters">
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">PAUTAS <span style="color: #8ac64b;">GENERALES:</span></span>
             </div>
@@ -114,7 +115,7 @@
     <br>
     <br>
     <div class="derechoDeberes row no-gutters" id="asociacionUsuario">
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">ASOCIACIÓN <span style="color: #8ac64b;">DE USUARIOS: </span></span>
             </div>
@@ -125,8 +126,8 @@
     <br>
     <br>
     <div class="derechoDeberes row container mx-auto">
-        <div class="col-md-4 col-sm-12 col-lg-6">
-            <form class="p-3 formularioCita" id="frmCita" name="frmCita" action="" method="post">
+        <div class="col-md-12 col-sm-12 col-lg-6">
+            <form class="p-3 formularioCita" id="frmAsociacion" name="frmAsociacion" action="/frmAsociacion" method="post">
                 <div class="row mb-3">
                     <div class="tituloAsociacionUsuario">
                         <span style="color: #8ac64b;">Haga parte de la Asoci<span style="color:#85868a;">ación de Usuarios</span></span>
@@ -147,7 +148,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-3">
-                        <input type="text" class="form-control rounded-pill" id="txtTelefono" name="txtTelefono" placeholder="Telefono">
+                        <input type="number" class="form-control rounded-pill" id="txtTelefono" name="txtTelefono" placeholder="Telefono">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <input type="email" class="form-control rounded-pill" id="txtCorreo" name="txtCorreo" placeholder="Correo">
@@ -158,7 +159,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="checkAcepto">
                             <label class="form-check-label" for="gridCheck">
-                                Acepto política de tratamiento de la información
+                                <a style="color: #85868a;" href="/tratamientoDeDatos"> Acepto política de tratamiento de la información</a>
                             </label>
                         </div>
                     </div>
@@ -169,16 +170,16 @@
                     </div>
                 </div>
             </form>
-        </div> 
-        <div class="lineasp col-md-4 col-sm-12 col-lg-6 mx-auto my-auto">
+        </div>
+        <div class="lineasp col-md-12 col-sm-12 col-lg-6 mx-auto my-auto">
             <img style="width: 100%; height: auto;" src="static/fotos/fotos_inicio/acur.jpg" alt="">
-        </div>    
+        </div>
 
-        <div class="lineasp col-md-4 col-sm-12 col-lg-12 mx-auto my-auto">
+        <div class="lineasp col-md-12 col-sm-12 col-lg-12 mx-auto my-auto">
             <p>Informes: Oficina de Atención al Usuario Teléfono: 8725400</p>
             <p>Ext.  129 Línea Gratuita: 018000180627 E-mail:</p>
             <a class="nav-link" href="#"><p>servicioalcliente@clinicauros.com</p></a>
-        </div> 
+        </div>
     </div>
 
 
@@ -187,7 +188,7 @@
         <div class="titulosderechoDeberes">
             <span style="color: #85868a;">NORMAS Y POLÍTICAS ESTABLECIDAS <span style="color: #8ac64b;">PARA EL INGRESO A LA CLÍNICA:</span></span>
         </div>
-        <div class="col-md-4 col-sm-12 col-lg-6">
+        <div class="col-md-6 col-sm-12 col-lg-6">
             <div><p><i class="bi bi-check2-square"></i> Se restringe el ingreso de armas o cualquier elemento que se considere peligroso para la seguridad de los usuarios y trabajadores que se encuentren en el interior de la institución. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Se prohíbe el ingreso de animales, bebidas alcohólicas y fumar. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Todo usuario debe presentar un documento de identidad para el ingreso. </p></div>
@@ -199,7 +200,7 @@
                 <img style="width: 70%; height: auto; border-radius: 15px;" src="static/fotos/fotos_inicio/siau2.jpg" alt="">
             </div>
         </div> 
-        <div class="col-md-4 col-sm-12 col-lg-6">
+        <div class="col-md-6 col-sm-12 col-lg-6">
             <div><p><i class="bi bi-check2-square"></i> Cumplir puntualmente las citas médicas y de servicios; debe informar previamente, su cancelación o aplazamiento. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Cumplir con las obligaciones financieras de los servicios recibidos en la clínica. </p></div>
             <div><p><i class="bi bi-check2-square"></i> Si no se encuentra satisfecho con su atención, dar a conocer sus inquietudes a la oficina de atención al usuario 8725400 Ext 129, servicioalcliente@clinicauros.com. </p></div>
@@ -215,7 +216,7 @@
         <div class="titulosderechoDeberes">
             <span style="color: #85868a;">PREPARACIÓN PARA <span style="color: #8ac64b;">EXÁMENES</span></span>
         </div>
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
@@ -607,7 +608,7 @@
         <div class="titulosderechoDeberes">
             <span style="color: #85868a;">HORARIO DE <span style="color: #8ac64b;">VISITAS</span></span>
         </div>
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
@@ -722,7 +723,7 @@
     <br>
     <br>
     <div class="derechoDeberes row no-gutters" id="politicasDeParticipacion">
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <div class="tituloTengaEncuenta">
                 <span style="color: #85868a;">POLÍTICA DE PARTICIPACIÓN <span style="color: #8ac64b;">SOCIAL EN SALUD (PPSS):</span></span>
             </div>
@@ -806,10 +807,33 @@
     </table>
     <br>
     <div class="derechoDeberes row no-gutters">
-        <div class="col-md-4 col-sm-12 col-lg-12">
+        <div class="col-md-12 col-sm-12 col-lg-12">
             <p>Como política de control y calidad, Clínica Uros S.A.S trabaja sobre indicadores y la gestión de participación social, por lo tanto, se rinden indicadores mes a mes sobre la gestión realizadas de las PQRSF, para su revisión y planes de mejoramiento. Se genera sensibilización y oportunidad por parte de los líderes de cada proceso para contestar las inquietudes que formulan los ciudadanos.</p>
         </div>    
     </div>
 
+    {% if mensaje is defined %}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="{{mensaje}}">
+            {%else%}
+                <input id="txtMensajeS" name="txtMensajeS" type="hidden" value="">
+            {%endif%}
+
+            <div id="mensaje" style="text-align:center">
+
+                {% if tarea is defined %}
+                    {% if tarea == "frmAsociacion" %}
+                        {% if estado %}
+                            <script>
+                                alertaTrueAsociacion()
+                            </script>
+                        {%else%}
+                            <script>
+                                alertaFalseAsociacion()
+                            </script>
+                        {%endif%}
+                    {%endif%}
+                {%endif%}
+
+            </div>
     
 {% endblock %}

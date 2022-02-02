@@ -28,95 +28,76 @@
     <body>
         <header class="header fixed-top">
             <div class="row">
-                <div class="logomenu col-md-4 col-sm-12 col-lg-3 mx-auto my-auto">
+                <div class="logomenu col-md-12 col-sm-12 col-lg-3 mx-auto my-auto">
                     <a class="navbar-brand" href="/">
                         <img style="padding-left: 40%; padding-right: 5px;" src="static/fotos/logo.png" alt="" >
                     </a>
                 </div>
-                <div class="col-md-4 col-sm-12 col-lg-9">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12 col-lg-12">
-                            <nav class="menuDos navbar navbar-expand-lg">
-                                <div class="container-fluid d-flex justify-content-center">
-                                    <a class="navbar-brand" href="http://clinicareinaisabel.com/nuestra-clinica.php">
-                                        <img src="static/fotos/reina.png" alt="">
-                                    </a>
-                                    <a class="navbar-brand" style="margin-left: 70px; margin-right: 60px;" href="https://www.centroespecializadodeurologia.com.co/">
-                                        <img src="static/fotos/clinicaputumayo.png" alt="">
-                                    </a>
-                                    <a class="navbar-brand" href="https://www.clinicasagradafamilia.net/">
-                                        <img src="static/fotos/sagradafamilia.png" alt="">
-                                    </a>
+                <div class="col-md-12 col-sm-12 col-lg-9 my-auto">
+                    <nav class="menu navbar navbar-expand-md my-auto">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >
+                            <span class="navbar-toggler-icon"></span></button>
+                            <a href="/" class="my-auto navbar-toggler">
+                                <img style="width: 100%; height: 40px;" src="static/fotos/logo.png" alt="" >
+                            </a>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
-                            </nav>
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-lg-12">
-                            <nav class="menu navbar navbar-expand-md">
-                                <div class="container-fluid">
-                                    <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" >
-                                    <span class="navbar-toggler-icon"></span></button>
-                                    <a href="/" class="my-auto navbar-toggler">
-                                        <img style="width: 100%; height: 40px;" src="static/fotos/logo.png" alt="" >
-                                    </a>
-                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                                        <div class="offcanvas-header">
-                                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-                                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                        </div>
-                                        <div class="offcanvas-body justify-content-center">
-                                            <ul class="navbar-nav">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" aria-current="page" href="/">INICIO</a>
-                                                </li>
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link active">NUESTRA CLÍNICA</a>
-                                                    <div class="dropdown-content">
-                                                        <a class="nav-link" href="/nuestraClinica">Acerca de Clinica uros</a>
-                                                        <a class="nav-link" href="/portafolio">Portafolio de servicio</a>
-                                                        <div class="dropdown1">
-                                                            <a class="nav-link">Nuestros Programas insignia</a>
-                                                            <div class="dropdown-content1">
-                                                                <div class="dropdown-content2">
-                                                                    <a class="nav-link" href="/proyectoAngel">Programa Ángel Uros</a>
-                                                                    <a class="nav-link" href="/planCanguro">Plan canguro</a>
-                                                                </div>
-                                                                
-                                                            </div>
+                                <div class="offcanvas-body justify-content-end">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="/">INICIO</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link active">NUESTRA CLÍNICA</a>
+                                            <div class="dropdown-content">
+                                                <a class="nav-link" href="/nuestraClinica">Acerca de Clinica uros</a>
+                                                <a class="nav-link" href="/portafolio">Portafolio de servicio</a>
+                                                <div class="dropdown1">
+                                                    <a class="nav-link">Nuestros Programas insignia</a>
+                                                    <div class="dropdown-content1">
+                                                        <div class="dropdown-content2">
+                                                            <a class="nav-link" href="/proyectoAngel">Programa Ángel Uros</a>
+                                                            <a class="nav-link" href="/planCanguro">Plan canguro</a>
                                                         </div>
-                                                        <a class="nav-link" href="/proyectos">Nuestros Proyectos</a>
-                                                        <!--<a class="nav-link" href="#">Informe Min. Trabajo COVID</a>-->
-                                                        <a class="nav-link " href="/galeriaFotos">Galeria</a>
+                                                        
                                                     </div>
-                                                </li>
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link active">SIAU</a>
-                                                    <div class="dropdown-content">
-                                                        <a class="nav-link" href="/contacto#pqr">PQR</a>
-                                                        <a class="nav-link" href="/#citaEnLinea">Citas en Línea</a>
-                                                        <a class="nav-link" href="/derechosDeberes">Derechos y deberes</a>
-                                                        <a class="nav-link" href="/derechosDeberes#asociacionUsuario">Asociación de usuarios</a>
-                                                        <a class="nav-link" href="/derechosDeberes#horarioVisitas">Horarios de visitas</a>
-                                                        <a class="nav-link" href="/derechosDeberes#normasPoliticas">Normas y politicas de seguridad</a>
-                                                        <a class="nav-link" href="/derechosDeberes#politicasDeParticipacion">Politica de participacion ciudadana</a>
-                                                        <a class="nav-link" href="/derechosDeberes#preparacionExamenes">Preparacion para examenes</a>
-                                                        <a class="nav-link" href="/contacto">Call Center</a>
-                                                        <a class="nav-link" href="/contacto#directorioT">Directorio telefonico</a>
-                                                    </div>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="/servicios">SERVICIOS</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="/contacto">CONTÁCTENOS</a>
-                                                </li>
-                                            </ul>
-                                            
-                                        </div>
-                                    </div>
+                                                </div>
+                                                <a class="nav-link" href="/proyectos">Nuestros Proyectos</a>
+                                                <!--<a class="nav-link" href="#">Informe Min. Trabajo COVID</a>-->
+                                                <a class="nav-link " href="/galeriaFotos">Galeria</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link active">SIAU</a>
+                                            <div class="dropdown-content">
+                                                <a class="nav-link" href="/contacto#pqr">PQR</a>
+                                                <a class="nav-link" href="/#citaEnLinea">Citas en Línea</a>
+                                                <a class="nav-link" href="/derechosDeberes">Derechos y deberes</a>
+                                                <a class="nav-link" href="/derechosDeberes#asociacionUsuario">Asociación de usuarios</a>
+                                                <a class="nav-link" href="/derechosDeberes#horarioVisitas">Horarios de visitas</a>
+                                                <a class="nav-link" href="/derechosDeberes#normasPoliticas">Normas y politicas de seguridad</a>
+                                                <a class="nav-link" href="/derechosDeberes#politicasDeParticipacion">Politica de participacion ciudadana</a>
+                                                <a class="nav-link" href="/derechosDeberes#preparacionExamenes">Preparacion para examenes</a>
+                                                <a class="nav-link" href="/contacto">Call Center</a>
+                                                <a class="nav-link" href="/contacto#directorioT">Directorio telefonico</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="/servicios">SERVICIOS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="/contacto">CONTÁCTENOS</a>
+                                        </li>
+                                    </ul>
+                                    
                                 </div>
-                            </nav>
+                            </div>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
             
@@ -134,13 +115,19 @@
                     <div id="carouselExampleFade" class="carousel slide carousel-fade mx-auto" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="static/fotos/nefro.png" class="d-block" alt="...">
+                                <a href="http://clinicareinaisabel.com/nuestra-clinica.php">
+                                    <img src="static/fotos/reina.png" alt="">
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="static/fotos/Urologia.png" class="d-block" alt="...">
+                                <a href="https://www.centroespecializadodeurologia.com.co/">
+                                    <img src="static/fotos/clinicaputumayo.png" alt="">
+                                </a>
                             </div>
                             <div class="carousel-item">
-                                <img src="static/fotos/reina.png" class="d-block" alt="...">
+                                <a href="https://www.clinicasagradafamilia.net/">
+                                    <img src="static/fotos/sagradafamilia.png" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>

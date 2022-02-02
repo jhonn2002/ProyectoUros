@@ -68,7 +68,7 @@ def citasEnLinea():
                           </table>
                         """
                 try:
-                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2021')
+                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2022')
                     email.send(to=corre, cc=correo, subject=asunto, contents=contenido)
                     estado=True     
                     mensaje=f'Su informacion fue enviada con exito'  
@@ -126,7 +126,7 @@ def trabajeConUros():
                         </table>
                         """
           try:
-              email=yagmail.SMTP('softcaf@gmail.com','softcaf2021')
+              email=yagmail.SMTP('softcaf@gmail.com','softcaf2022')
               # Guardamos el archivo en el directorio "Archivos jpg"
               archivo.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
               email.send(to=corre, cc=correo, subject=asunto, contents=contenido, attachments=[f'static/archivos/{filename}'])
@@ -193,7 +193,7 @@ def chequeoEjecutivos():
                           </table>
                         """
                 try:
-                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2021')
+                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2022')
                     email.send(to=corre, cc=correo, subject=asunto, contents=contenido)
                     estado=True     
                     mensaje=f'Su informacion fue enviada con exito'  
@@ -268,7 +268,7 @@ def informacionPqr():
                           </table>
                         """
                 try:
-                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2021')
+                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2022')
                     email.send(to=corre, cc=correo, subject=asunto, contents=contenido)
                     estado=True     
                     mensaje=f'Su informacion fue enviada con exito'  
@@ -280,3 +280,68 @@ def informacionPqr():
       mensaje="Error no se puede finalizar su solicitud"
     
     return render_template("formularioPqr.html",mensaje=mensaje, tarea="informacionPqr", estado=estado)
+
+@app.route("/frmAsociacion", methods=['POST'])
+def frmAsociacion():
+
+    #Declaro 3 variables
+    estado=False
+
+    #Se guardan los valores que viene del formulario en las distintas varibles
+    nombre = request.form['txtNombre']
+    apellido=request.form['txtApellido']
+    telefono = request.form['txtTelefono']
+    entidad = request.form['txtEntidad']
+    correo=request.form['txtCorreo']
+    corre="jfsanchez193@misena.edu.co"
+
+    #Confirmo que las variables no esten vacias
+    try:
+        if nombre and apellido and telefono and entidad and correo:
+            # Enviar Correo con archivo
+
+                asunto=f'ASOCIACIÓN DE USUARIOS'
+                contenido=f"""
+                          <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+                            <tr>
+                              <td align="center" style="padding:0;">
+                                <table role="presentation" style="width:602px;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;">
+                                  <tr>
+                                    <td align="center" style="padding:40px 0 30px 0;">
+                                      <img src="https://clinicauros.com/wp-content/uploads/2017/09/fachad1.jpg" alt="" width="300" style="height:auto;display:block;" />
+                                    </td>
+                                  </tr>
+                                    <tr>
+                                      <td style="padding:36px 30px 42px 30px;">
+                                        <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                          <tr>
+                                            <td style="padding:0 0 36px 0;color:#153643;">
+                                              <h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">ASOCIACIÓN DE USUARIOS</h1>
+                                              <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Nombre: {nombre}</p>
+                                              <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Apellido: {apellido}</p>
+                                              <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Telefono: {telefono}</p>
+                                              <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Entidad: {entidad}</p>
+                                              <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">Correo: {correo}</p>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        """
+                try:
+                    email=yagmail.SMTP('softcaf@gmail.com','softcaf2022')
+                    email.send(to=corre, cc=correo, subject=asunto, contents=contenido)
+                    estado=True
+                    mensaje=f'Su informacion fue enviada con exito'
+                except Exception as ex:
+                    mensaje="Error no se puede finalizar su solicitud"
+        else:
+            mensaje="Llenar los campos"
+    except:
+       mensaje="Error no se puede finalizar su solicitud"
+
+    return render_template("derechosDeberes.html",mensaje=mensaje, tarea="frmAsociacion", estado=estado)

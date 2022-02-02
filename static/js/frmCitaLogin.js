@@ -79,6 +79,26 @@ function alertaFalsePqr() {
     });
 }
 
+function alertaTrueAsociacion() {
+    sweetAlert({
+        title:'¡Correcto!!',
+        text: $("#txtMensajeS").val(),
+        type:'success'
+    },function(isConfirm){
+        redAsoci()
+    });
+}
+
+function alertaFalseAsociacion() {
+    sweetAlert({
+        title:'Problemas!!',
+        text: $("#txtMensajeS").val(),
+        type:'warning'
+    },function(isConfirm){
+        redAsoci()
+    });
+}
+
 function red() {
     window.location.href = '/citaLogin';
 }
@@ -91,4 +111,8 @@ function redChequeo() {
 }
 function redPqr() {
     window.location.href = '/formPqr';
+}
+
+function redAsoci() {
+    window.location.href = '/derechosDeberes';
 }
